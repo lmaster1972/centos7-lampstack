@@ -5,7 +5,7 @@ Basic Docker setup to enable a quick start for a LAMP Stack based on CentOS 7 wi
 ## TODOs
 
 - [x] Basic setup
-- [x] Expose servie
+- [x] Expose services
 - [x] MySQL proper volume mount
  
 ## How to run
