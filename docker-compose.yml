@@ -1,0 +1,26 @@
+# lampstack based on CentOS 7 equipped with MariaDB image to fit to the purpose
+#
+version: '2'
+services:
+    db:
+        image: mariadb:latest
+        container_name: mariadb
+        volumes:
+          - ./mysql:/var/lib/mysql:cached
+        environment:
+          - MYSQL_ROOT_PASSWORD=db_root_pass
+        ports:
+        - "8889:3306"
+        restart: always
+
+    www:
+        build:
+          context: ./docker-config/centos
+        container_name: c7-www-php
+        volumes:
+          - ./www:/var/www/html
+        ports:
+          - "80:80" 
+        restart: always
+        links:
+          - db
