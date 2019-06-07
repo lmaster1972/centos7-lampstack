@@ -28,7 +28,7 @@ You'll need to configure your application to use any services you enabled:
 
 | Service | Port | Notes |
 | --- | --- | --- |
-| www | 9000 | --- |
+| www | 80 | --- |
 | db | 3306 | --- |
 
 ## Docker compose cheatsheet
