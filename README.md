@@ -46,7 +46,8 @@ You'll need to configure your application to use any services you enabled:
 ## Recommendations
 
   * Run composer outside of the php container, as doing so would install all your dependencies owned by `root` within your vendor folder.
-  * Run commands (ie Symfony's console) straight inside of your container. You can easily open a shell as described above and do your thing from there.
+  * Run commands (ie bash's console) straight inside of your container. You can easily open a shell as described above and do your thing from there.
+  * Subfolders called 'www', 'mysql' and 'mysql-dump' are need in order to let container work properly.
 
 ## Credits
 [PHPDocker](https://phpdocker.io/generator)

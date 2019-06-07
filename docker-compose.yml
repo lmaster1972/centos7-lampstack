@@ -1,12 +1,14 @@
 # lampstack based on CentOS 7 equipped with MariaDB image to fit to the purpose
 #
-version: '2'
+version: '2.1'
 services:
     db:
         image: mariadb:latest
         container_name: mariadb
         volumes:
           - ./mysql:/var/lib/mysql:cached
+          - ./docker-config/mariadb:/etc/mysql/conf.d
+          - ./docker-config/mariadb/script:/docker-entrypoint-initdb.d/
         environment:
           - MYSQL_ROOT_PASSWORD=db_root_pass
         ports:
