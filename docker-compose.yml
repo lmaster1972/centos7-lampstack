@@ -21,8 +21,9 @@ services:
         container_name: c7-www-php
         volumes:
           - ./www:/var/www/html
+          - ./www-logs:/var/log/httpd
         ports:
           - "80:80" 
         restart: always
-        links:
+        depends_on:
           - db
