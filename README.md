@@ -54,4 +54,4 @@ You'll need to configure your application to use any services you enabled:
 [Xdebug with Docker and PHPStorm](https://medium.com/@pablofmorales/xdebug-with-docker-and-phpstorm-786da0d0fad2)
 
 ## License
-[MIT](/LICENSE)
+[GPL v3](/LICENSE)
